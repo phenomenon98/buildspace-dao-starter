@@ -43,13 +43,15 @@ const App = () => {
       .getAll()
       .then((proposals) => {
         // Set state!
-        setProposals(proposals);
+        setProposals([proposals[2]]);
         console.log("🌈 Proposals:", proposals)
       })
       .catch((err) => {
         console.error("failed to get proposals", err);
       });
   }, [hasClaimedNFT]);
+
+  
 
   // We also need to check if the user already voted.
   useEffect(() => {
@@ -177,11 +179,12 @@ const App = () => {
   if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>🍪DAO Member Page</h1>
-        <p>Congratulations on being a member</p>
+        <h1>Welcome to PlaylistDAO</h1>
+        <h3> Help maintain <a href="#">this playlist </a> by voting for songs that you like</h3>
+        {/* <p>Congratulations on being a member</p> */}
         <div>
           <div>
-            <h2>Member List</h2>
+            <h2><b>DJs</b> (Member List)</h2>
             <table className="card">
               <thead>
                 <tr>
@@ -202,7 +205,7 @@ const App = () => {
             </table>
           </div>
           <div>
-            <h2>Active Proposals</h2>
+            <h2>Proposed songs</h2>
             <form
               onSubmit={async (e) => {
                 e.preventDefault();

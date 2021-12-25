@@ -1,11 +1,11 @@
 html,
 body {
   margin: 0;
-  font-family: Inter, sans-serif;
+  font-family: sora, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #7700ee;
-  color: #fff;
+  background-color: #1DB954;
+  color: #000000;
   overflow-x: hidden;
 }
 #root {
@@ -15,6 +15,7 @@ body {
 
 h1 {
   font-size: 5rem;
+  font-style: bold;
 }
 h3 {
   font-size: 2rem;
@@ -96,7 +97,7 @@ h3 {
 
 .member-page form h5 {
   margin-top: 0;
-  color: #7700ee;
+  color: #000000;
 }
 
 .member-page form .card > div {
