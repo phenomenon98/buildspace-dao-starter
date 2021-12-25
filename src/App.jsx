@@ -13,7 +13,7 @@ const tokenModule = sdk.getTokenModule("0x8Afd3110334332dB7116166c47cF71AE706450
 const voteModule = sdk.getVoteModule("0x40cC3f3C2C50B20a075B4474CeC2e5A9a75E54dC");
 
 const App = () => {
-  const { connectWallet, address, error, provider } = useWeb3();
+  const { connectWallet, address, provider } = useWeb3();
   console.log("👋 Address:", address)
 
   // The signer is required to sign transactions on the blockchain.
@@ -180,7 +180,7 @@ const App = () => {
     return (
       <div className="member-page">
         <h1>Welcome to PlaylistDAO</h1>
-        <h3> Help maintain <a href="#">this playlist </a> by voting for songs that you like</h3>
+        <h3> Help maintain <a href="www.google.com">this playlist </a> by voting for songs that you like</h3>
         {/* <p>Congratulations on being a member</p> */}
         <div>
           <div>
